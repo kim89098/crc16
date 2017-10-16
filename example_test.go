@@ -3,7 +3,7 @@ package crc16_test
 import (
 	"fmt"
 
-	"bitbucket.org/victor-_-/crc16"
+	"github.com/kim89098/crc16"
 )
 
 func ExampleChecksum() {

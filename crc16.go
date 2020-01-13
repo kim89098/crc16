@@ -186,3 +186,13 @@ func Bytes(crc uint16, tab *Table) []byte {
 
 	return b
 }
+
+// Uint16 returns the crc value with a uint16. It uses Table's ByteOrder. If
+// ByteOrder is nil, it returns 0.
+func Uint16(crc []byte, tab *Table) uint16 {
+	if tab.ByteOrder == nil {
+		return 0
+	}
+
+	return tab.ByteOrder.Uint16(crc)
+}
